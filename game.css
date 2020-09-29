@@ -1,0 +1,54 @@
+body
+{
+    background-color: rgb(38, 26, 65);
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+h1
+{
+    color: rgb(243, 239, 186);
+    font-size: 3rem;
+    margin-top: 70px;
+    text-transform: capitalize;
+}
+
+.container
+{
+    width: 70%;
+    margin: 70px auto 0;
+}
+
+.row
+{
+    margin: auto;
+}
+
+.btn
+{
+    width: 220px;
+    height: 220px;
+    margin: 25px;
+    border: 10px solid black;
+    border-radius: 40px;
+}
+
+.red
+{
+    background-color: red;
+}
+
+.green
+{
+    background-color:green;
+}
+
+.blue
+{
+    background-color:blue;
+}
+
+.yellow
+{
+    background-color: yellow;
+}
