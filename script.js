@@ -1,12 +1,24 @@
-let rando;
-const buttons = $('.btn');
-let randomButtons = [];
-let randomChosenButton;
-let userButtons = [];
+let buttonColours = ["red", "blue", "green", "yellow"];
 
-function nextSequence()
+let gamePattern = [];
+
+
+$(document).on("keypress", () =>
 {
-    rando = Math.floor(Math.random()*4);
-    randomChosenButton = buttons[rando];
-    randomButtons.push(randomChosenButton);
+    nextSequence();
+});
+
+
+
+function nextSequence() 
+{
+
+    let randomNumber = Math.floor(Math.random() * 4);
+    let randomChosenColour = buttonColours[randomNumber];
+    gamePattern.push(randomChosenColour);
+
+    $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
+
+    let audio = new Audio(`sounds/${randomChosenColour}.mp3`);
+    audio.play();
 }

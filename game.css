@@ -33,22 +33,22 @@ h1
     border-radius: 40px;
 }
 
-.red
+#red
 {
     background-color: red;
 }
 
-.green
+#green
 {
     background-color:green;
 }
 
-.blue
+#blue
 {
     background-color:blue;
 }
 
-.yellow
+#yellow
 {
     background-color: yellow;
 }
