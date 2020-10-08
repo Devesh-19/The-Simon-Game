@@ -1,11 +1,15 @@
-let buttonColours = ["red", "blue", "green", "yellow"];
+const buttonColours = ["red", "blue", "green", "yellow"];
 
 let gamePattern = [];
 
+let userClickedPattern = [];
 
-$(document).on("keypress", () =>
+
+$('.btn').on("click", function()
 {
-    nextSequence();
+    let userChosenColour = this.id;
+    userClickedPattern.push(userChosenColour);
+    console.log(userClickedPattern);
 });
 
 
