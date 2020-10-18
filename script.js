@@ -21,6 +21,7 @@ $('.btn').on("click", function()
     userClickedPattern.push(userChosenColour);
     playSound(userChosenColour);
     animatePress(userChosenColour);
+    checkAnswer(userClickedPattern.length - 1);
 });
 
 
@@ -36,7 +37,6 @@ function animatePress(currentColour)
 
 function nextSequence() 
 {
-
     let randomNumber = Math.floor(Math.random() * 4);
     let randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
@@ -55,4 +55,16 @@ function playSound(name)
 {
     let audio = new Audio(`sounds/${name}.mp3`);
     audio.play();
+}
+
+function checkAnswer(currentLevel)
+{
+    if (userClickedPattern[currentLevel] === gamePattern[currentLevel])
+    {
+        if (userClickedPattern.length === gamePattern.length)
+        {
+            setTimeout (nextSequence, 1000);
+            userClickedPattern = [];
+        }
+    }
 }
