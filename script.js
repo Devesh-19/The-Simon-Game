@@ -1,8 +1,18 @@
 const buttonColours = ["red", "blue", "green", "yellow"];
-
 let gamePattern = [];
-
 let userClickedPattern = [];
+let startGame = false;
+let level = 0;
+
+
+$(document).on("keypress", function()
+{
+    if (startGame === false)
+    {
+        nextSequence();
+        startGame = true;
+    }
+});
 
 
 $('.btn').on("click", function()
@@ -23,6 +33,7 @@ function animatePress(currentColour)
     }, 100);
 }
 
+
 function nextSequence() 
 {
 
@@ -33,7 +44,12 @@ function nextSequence()
     $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
 
     playSound(randomChosenColour);
+
+    level++;
+
+    $("h1").text(`Level ${level}`);
 }
+
 
 function playSound(name)
 {
