@@ -31,6 +31,7 @@ h1
     margin: 25px;
     border: 10px solid black;
     border-radius: 40px;
+    outline: none;
 }
 
 #red
